@@ -1,0 +1,1 @@
+void changemode(int dir)

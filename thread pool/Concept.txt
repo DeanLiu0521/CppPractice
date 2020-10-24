@@ -1,0 +1,15 @@
+Concept:
+    software design for achieving concurrency of execution in a computer program.
+
+Parts:
+    Thread_Pool_Manager: initialize threads, start and stop threads, schedualer, manage the pool
+    Working_Thread: threads
+    Task_Socket: socket for tasks
+    Task_Queue: Store unprocessed tasks and be able to schedule and manage the priority of tasks
+
+4 Conditions:
+    No Task
+    The number of tasks in the queue is smaller than or equal to the threads in the pool
+    The number of tasks is greater than the capacoty of the thead Thread_Pool. The buffer queue is not full
+    The number of tasks is greater than the capacoty of the thead Thread_Pool. The buffer queue is full
+

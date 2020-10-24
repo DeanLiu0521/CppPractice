@@ -1,0 +1,21 @@
+----Main thread----
+Load settings
+while true do
+    Wait for connection
+    Connection received, create a new thread and transfer this connection to this thread.
+end
+
+----Connection thread----
+Analyze request
+if dynamic content do
+    Dump the HTTP request and send it to the interpreter
+    Wait for response from the interpreter
+    Read response header from the interpreter
+    Stream response
+else if static content do
+    Load requested file
+    Stream file content
+end
+(Optional) Cache the response if size < X
+Send the response
+Close the socket
